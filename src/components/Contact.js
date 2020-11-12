@@ -90,12 +90,13 @@ const Contact = () => {
                 <span className={classes.amazingColor}>experience together</span></h1>
                 
                 <div className={classes.infoWrapper}>
-                    <form className={classes.form} name="contact" method="POST" data-netlify="true">
+                    <form className={classes.form} name="contact" method="POST" >
+                        <input type="hidden" name="form-name" value="contact" />
                         <p>
-                            <label>Your Name: <input className={classes.input} type="text" name="name" /></label>   
+                            <label>Your Name: <input required className={classes.input} type="text" name="name" /></label>   
                         </p>
                         <p>
-                            <label>Your Email: <input className={classes.input} type="email" name="email" /></label>
+                            <label>Your Email: <input required className={classes.input} type="email" name="email" /></label>
                         </p>
                         <p>
                             <label>Message: <textarea className={classes.textArea} name="message"></textarea></label>
