@@ -1,4 +1,8 @@
 import Image from './me.jpg'
+import Postiva from './images/postiva.jpg'
+import Resume from './images/resumeQ.jpg'
+import Kit from './images/kit10.jpg'
+import Music from './images/music.jpg'
 
 export default
     {
@@ -29,7 +33,7 @@ export default
             title:'Postiva', //Project Title - Add Your Project Title Here
              service:'Social Media App', // Add Your Service Type Here
             //Project Image - Add Your Project Image Here
-             imageSrc:"https://images.unsplash.com/photo-1558104631-0fa41a8f6c20?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+             imageSrc:`${Postiva}`,
              //Project URL - Add Your Project Url Here
              url:'http://chetanverma.com/',
              description: 'Description of the project1',
@@ -41,7 +45,7 @@ export default
                 id: 2,//DO NOT CHANGE THIS (Please)😅
                 title: 'Quality Hub: ResumeQ',
                 service: 'Website Development',
-                imageSrc: "https://images.unsplash.com/photo-1554866585-cd94860890b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+                imageSrc: `${Resume}`,
                 url: 'http://chetanverma.com/',
                 description: 'Description of the project2',
                 code: 'Code',
@@ -52,7 +56,7 @@ export default
                 id: 3,//DO NOT CHANGE THIS (Please)😅
                 title: 'Tune App',
                 service: 'Music App',
-                imageSrc: "https://images.unsplash.com/photo-1511500118080-275313ec90a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+                imageSrc: `${Music}`,
                 url: 'http://chetanverma.com/',
                 description: 'Description of the project3',
                 code: 'Code',
@@ -63,7 +67,7 @@ export default
                 id: 4,//DO NOT CHANGE THIS (Please)😅
                 title: 'Kit10 - Store',
                 service: 'Branding',
-                imageSrc: "https://images.unsplash.com/photo-1558452919-08ae4aea8e29?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+                imageSrc: `${Kit}`,
                 url: 'http://chetanverma.com/',
                 description: 'Description of the project4',
                 code: 'Code',
