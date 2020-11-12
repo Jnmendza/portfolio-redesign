@@ -48,17 +48,17 @@ function App() {
   return (
     <div className={classes.App}>
       <Navbar></Navbar>
-      <div className={classes.appHeader}>
+      <div className={classes.appHeader} id="home">
       <Header></Header>
       </div>
       
-      <div className={classes.about}>
+      <div className={classes.about} id="about">
         <About></About>
       </div>
-      <div className={classes.work}>
+      <div className={classes.work} id="work" >
         <Work></Work>
       </div>
-      <div className={classes.contact}>
+      <div className={classes.contact} id="contact">
         <Contact></Contact>
       </div>
     </div>
