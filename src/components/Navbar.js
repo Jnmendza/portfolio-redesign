@@ -8,7 +8,7 @@ const useStyles = makeStyles({
         position:'fixed',
         left:'60em',
         top:'6em',
-        zIndex: '10',
+        // zIndex: '1',
     },
     navbarList: {
         display: 'inline-block',

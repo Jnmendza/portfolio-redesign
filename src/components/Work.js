@@ -33,6 +33,7 @@ const Work = () => {
                                 links={project.links}
                                 service = {project.service}
                                 imageSrc = {project.imageSrc}
+                                details = {project.details}
                                 url={project.url}
                                 code={project.code}
                                 demo={project.demo}
