@@ -5,10 +5,10 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
     navbar: {
-        position:'fixed',
+        position:'sticky',
         left:'60em',
-        top:'6em',
-        // zIndex: '1',
+        top:'1em',
+        
     },
     navbarList: {
         display: 'inline-block',

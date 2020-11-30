@@ -4,34 +4,51 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   container: {
-    margin: '20px'
+    // backgroundColor: 'pink',
+    display: 'flex',
+    marginTop: '8em',
+    marginLeft: '8em',
+    width: '80%',
+    height: '80%',
+    zIndex: 1000
+
+  },
+  containerLinks: {
+    margin: '20px 0'
   },
   link: {
     textDecoration: 'none',
     margin: '20px',
+  }, 
+  image: {
+    margin: 20,
+  },
+  info: {
+    margin: 'auto 0',
   }
 })
 
-const ProjectModal = ({ title, description, code, demo, website, setModalIsOpen, details, imageSrc }) => {
+const ProjectModal = ({ title, description, links, setModalIsOpen, details, imageSrc }) => {
   const classes = useStyles()
 
   return (
       <Box container className={classes.container}>
-        <img className={classes.image} src={imageSrc} alt={title}></img>
-        <h1>{title}</h1>
-        <p>{description}</p>  
-        <ul>
-          <li>{details[0]}</li>
-          <li>{details[1]}</li>
-          <li>{details[2]}</li>
-        </ul>
-        <Box container className={classes.container}>
-          <a className={classes.link} target="_blank" href={code} rel="noopener noreferrer" >Code </a> 
-          <a className={classes.link} target="_blank" href={demo} rel="noopener noreferrer" >Demo </a>
-          <a className={classes.link} target="_blank" href={website} rel="noopener noreferrer" >Website </a>
+        <Box container className={classes.image}>
+          <img className={classes.image} src={imageSrc} alt={title}></img>
         </Box>
-        <Button variant='contained' color='primary' onClick={() => setModalIsOpen(false)}>Close</Button>
-
+        <Box container className={classes.info}>
+          <h1>{title}</h1>
+          <p>{description}</p>  
+          <ul>
+            {details.map(detail => <li>{detail}</li>)}
+          </ul>
+          <Box container className={classes.containerLinks}>
+            <a className={classes.link} target="_blank" href={links.code} rel="noopener noreferrer" >Code </a> 
+            <a className={classes.link} target="_blank" href={links.demo} rel="noopener noreferrer" >Demo </a>
+            <a className={classes.link} target="_blank" href={links.website} rel="noopener noreferrer" >Website </a>
+          </Box>
+          <Button variant='contained' color='primary' onClick={() => setModalIsOpen(false)}>Close</Button>
+        </Box>
       </Box>
   )
 };

@@ -38,9 +38,11 @@ export default
              url:'http://chetanverma.com/',
              description: 'Description of the project1',
              details: ['Detail 1','Detail 2','Detail 3','Detail 4'],
+             links:{
              code: 'https://github.com/Jnmendza/social-media-app/tree/master',
              demo: 'https://happy-visvesvaraya-6bb649.netlify.app',
              website: 'Website',
+           }
             },
             {
                 id: 2,//DO NOT CHANGE THIS (Please)😅
@@ -50,22 +52,25 @@ export default
                 url: 'http://chetanverma.com/',
                 description: 'A micro-service of Quality Hub that allows users to search through a marketplace of qualified resume coaches and request a review of their resume.',
                 details: ['Migrated database to PostgresSQL for data persistence','Connected ResumeQ backend with Core and InterviewQ in Apollo Federation','Implemented CRUD functionality with tables','Maintained consistent styling from previous designs of Quality Hub'],
+                links: {
                 code: 'https://github.com/Quality-Hub/quality-hub-core-fe',
                 demo: 'https://qualityhub19.netlify.app/',
                 website: 'Website',
+                }
             },
-            { 
-                id: 3,//DO NOT CHANGE THIS (Please)😅
-                title: 'Tune App',
-                service: 'Music App',
-                imageSrc: `${Music}`,
-                url: 'http://chetanverma.com/',
-                description: 'Description of the project3',
-                details: ['Detail 1','Detail 2','Detail 3','Detail 4'],
-                code: 'Code',
-                demo: 'Demo',
-                website: 'Website',
-            },
+            // { 
+            //     id: 3,//DO NOT CHANGE THIS (Please)😅
+            //     title: 'Tune App',
+            //     service: 'Music App',
+            //     imageSrc: `${Music}`,
+            //     url: 'http://chetanverma.com/',
+            //     description: 'Description of the project3',
+            //     details: ['Detail 1','Detail 2','Detail 3','Detail 4'],
+            //     links: {
+            //     code: 'Code',
+            //     demo: 'Demo',
+            //     website: 'Website',}
+            // },
             {
                 id: 4,//DO NOT CHANGE THIS (Please)😅
                 title: 'Kit10 - Store',
@@ -74,9 +79,11 @@ export default
                 url: 'http://chetanverma.com/',
                 description: 'Kit10 is a e-commerce site with retro sports gear. Users can select to add items to their cart, erase, and add more items to purchase.',
                 details: ['Built a Carousel with Bootstrap','Applied Context API for storing data','Styled application with Styled-Components and Bootstrap','React JS using hooks'],
+                links: {
                 code: 'Code',
                 demo: 'Demo',
                 website: 'Website',
+            }
            }
 
                     /*

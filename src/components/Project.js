@@ -15,11 +15,12 @@ const useStyles = makeStyles({
         height: '30em',
     },
     portal: {
-        zIndex: '100'
+        // width: '50vw',
+        // zIndex: 1
     }
 })
 
-const Project = ({ imageSrc, title, service, description, code, demo, website, details }) => {
+const Project = ({ imageSrc, title, service, description, links, details }) => {
     const [modalIsOpen, setModalIsOpen] = useState(false)
     const classes = useStyles()
     return ( 
@@ -36,9 +37,7 @@ const Project = ({ imageSrc, title, service, description, code, demo, website, d
                         imageSrc={imageSrc}
                         title={title} 
                         description={description}
-                        code={code}
-                        demo={demo}
-                        website={website}
+                        links={links}
                         details={details}
                         setModalIsOpen={setModalIsOpen}
                     />
