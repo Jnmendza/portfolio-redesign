@@ -7,11 +7,13 @@ const useStyles = makeStyles({
     project: {
         color: 'white',
         display: 'flex',
+        margin: '0 0 1em 0'
     },
     image: {
-        width: '30em',
-        height: '30em',
-        margin: '0 2em 0 0'
+        width: '20em',
+        height: '20em',
+        margin: '0 2em 0 0',
+        cursor: 'pointer',
     },
     info: {
         display: 'flex',
@@ -49,7 +51,6 @@ const Project = ({ project }) => {
                 <div className={classes.linkContainer}>
                    <Link target="_blank" className={classes.link} href={links.code} component="a">Code</Link>
                    <Link target="_blank" className={classes.link} href={links.demo} component="a">Demo</Link>
-                   <Link target="_blank" className={classes.link} href={links.website} component="a">Website</Link>
                 </div>
             </div>
         </div>

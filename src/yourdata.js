@@ -3,13 +3,15 @@ import Postiva from './images/postiva.jpg'
 import Resume from './images/resumeQ.jpg'
 import Kit from './images/kit10.jpg'
 import Music from './images/music.jpg'
+import Quiz from './images/quiz.png'
+import Tracker from './images/tracker.jpg'
 
 export default
     {
         //(Please Do Not Remove The comma(,) after every variable)
         //Change The Website Template
         name :'Jonathan Mendoza',
-        resumeURL: 'https://www.jonathanmendoza.dev/assets/resources/JonathanMendozaResume.pdf',
+        resumeURL: 'https://www.jonathanmendoza.dev/assets/JonathanMendozaResume.pdf',
         gitHubURL: 'https://github.com/jnmendza',
         linkedInURL: 'https://www.linkedin.com/in/jnmendza/',
         headerTagline: [//Line 1 For Header
@@ -28,48 +30,48 @@ export default
        ShowAboutImage:true,//true or false (Change Here)
        // Change Projects Here 
        projects:[
-           {
-            id: 1,//DO NOT CHANGE THIS (Please)😅
-            title:'Postiva', //Project Title - Add Your Project Title Here
-             service:'Social Media App', // Add Your Service Type Here
-            //Project Image - Add Your Project Image Here
-             imageSrc:`${Postiva}`,
-             //Project URL - Add Your Project Url Here
-             url:'http://chetanverma.com/',
-             description: 'Description of the project1',
-             details: ['Detail 1','Detail 2','Detail 3','Detail 4'],
-             links:{
-             code: 'https://www.github.com/Jnmendza/social-media-app/tree/master',
-             demo: 'https://www.happy-visvesvaraya-6bb649.netlify.app',
-             website: 'https://www.google.com',
-           }
-            },
+        //    {
+        //     id: 1,//DO NOT CHANGE THIS (Please)😅
+        //     title:'Postiva', //Project Title - Add Your Project Title Here
+        //      service:'Social Media App', // Add Your Service Type Here
+        //     //Project Image - Add Your Project Image Here
+        //      imageSrc:`${Postiva}`,
+        //      //Project URL - Add Your Project Url Here
+        //      url:'http://chetanverma.com/',
+        //      description: 'Description of the project1',
+        //      details: ['Detail 1','Detail 2','Detail 3','Detail 4'],
+        //      links:{
+        //      code: 'https://www.github.com/Jnmendza/social-media-app/tree/master',
+        //      demo: 'https://www.happy-visvesvaraya-6bb649.netlify.app',
+        //      website: 'https://www.google.com',
+        //    }
+        //     },
             {
                 id: 2,//DO NOT CHANGE THIS (Please)😅
                 title: 'Quality Hub: ResumeQ',
                 service: 'Website Development',
                 imageSrc: `${Resume}`,
-                url: 'http://chetanverma.com/',
+                url: 'https://qualityhub19.netlify.app/',
                 description: 'A micro-service of Quality Hub that allows users to search through a marketplace of qualified resume coaches and request a review of their resume.',
                 details: ['Migrated database to PostgresSQL for data persistence','Connected ResumeQ backend with Core and InterviewQ in Apollo Federation','Implemented CRUD functionality with tables','Maintained consistent styling from previous designs of Quality Hub'],
                 links: {
                 code: 'https://github.com/Quality-Hub/quality-hub-core-fe',
                 demo: 'https://qualityhub19.netlify.app/',
-                website: 'https://google.com',
+                // website: 'https://google.com',
                 }
             },
             { 
                 id: 3,//DO NOT CHANGE THIS (Please)😅
                 title: 'Quizz App',
                 service: 'Trivia game',
-                imageSrc: `${Music}`,
+                imageSrc: `${Quiz}`,
                 url: 'https://nostalgic-franklin-399330.netlify.app/',
                 description: 'Description of the project3',
                 details: ['Detail 1','Detail 2','Detail 3','Detail 4'],
                 links: {
-                code: 'https://www.google.com',
+                code: 'https://github.com/Jnmendza/quizz-app',
                 demo: 'https://nostalgic-franklin-399330.netlify.app/',
-                website: 'https://google.com',
+                // website: 'https://google.com',
             }
             },
             {
@@ -81,23 +83,25 @@ export default
                 description: 'Kit10 is a e-commerce site with retro sports gear. Users can select to add items to their cart, erase, and add more items to purchase.',
                 details: ['Built a Carousel with Bootstrap','Applied Context API for storing data','Styled application with Styled-Components and Bootstrap','React JS using hooks'],
                 links: {
-                code: 'Code',
-                demo: 'Demo',
-                website: 'https://google.com',
+                code: 'https://github.com/Jnmendza/kit10',
+                demo: 'https://kit10.netlify.app/',
+                // website: 'https://google.com',
             }
-           }
-
-                    /*
-
-                    If You Want To Add More Project just Copy and Paste This At The End (Update the id Respectively)
-                ,{
-                id: 5,
-                title: 'Project Five',
-                service: 'Something Amazing',
-                imageSrc: "",
-                url: ''
-            }
-                */
+           },
+           {
+            id: 5,//DO NOT CHANGE THIS (Please)😅
+            title: 'E-Tracker',
+            service: 'Budgeting App',
+            imageSrc: `${Tracker}`,
+            url: 'https://5ff3da7c49109800080e7924--eager-poitras-fdf1a2.netlify.app/',
+            description: 'Budget your income',
+            details: ['Built a Carousel with Bootstrap','Applied Context API for storing data','Styled application with Styled-Components and Bootstrap','React JS using hooks'],
+            links: {
+            code: 'https://github.com/Jnmendza/eTracker-client',
+            demo: 'https://5ff3da7c49109800080e7924--eager-poitras-fdf1a2.netlify.app/',
+            // website: 'https://google.com',
+        }
+       }
         ],
         social: [
             // Add Or Remove The Link Accordingly

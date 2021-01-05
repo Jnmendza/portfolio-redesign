@@ -96,7 +96,7 @@ const Contact = () => {
                         </h1>
                         
                         <div className={classes.infoWrapper}>
-                            <form className={classes.form} name="contact" method="POST" >
+                            <form className={classes.form} name="contact" method="POST" data-netlify="true" >
                                 <input type="hidden" name="form-name" value="contact" />
                                 <p>
                                     <label>Your Name: <input required className={classes.input} type="text" name="name" /></label>   
