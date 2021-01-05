@@ -8,6 +8,10 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import {IconButton} from '@material-ui/core';
 
 const useStyles = makeStyles({
+    container: {
+        margin: 'auto',
+        width: '80%'
+    },
     amazingColor: {
         color:'blue',
         opacity: 1,
@@ -79,46 +83,48 @@ const useStyles = makeStyles({
 
 const Contact = () => {
     const classes = useStyles()
-        return (  <div>
-        <h1 className={classes.title}>
-                <Fade bottom cascade> Contact.</Fade>
-        </h1>
-        <Fade bottom>
-        <div className='contact-content'>
+        return (  
+            <div className={classes.container}>
                 <h1 className={classes.title}>
-                Let’s create your next<br></br>
-                <span className={classes.amazingColor}>experience together</span></h1>
-                
-                <div className={classes.infoWrapper}>
-                    <form className={classes.form} name="contact" method="POST" >
-                        <input type="hidden" name="form-name" value="contact" />
-                        <p>
-                            <label>Your Name: <input required className={classes.input} type="text" name="name" /></label>   
-                        </p>
-                        <p>
-                            <label>Your Email: <input required className={classes.input} type="email" name="email" /></label>
-                        </p>
-                        <p>
-                            <label>Message: <textarea className={classes.textArea} name="message"></textarea></label>
-                        </p>
-                        <p>
-                            <button className={classes.button} type="submit">Send</button>
-                        </p>
-                    </form>
-                    <div className={classes.contactInfo}>
-                        <h3>Email</h3>
-                        <a href={`mailto:${data.contactEmail}`} className={classes.email}>{data.contactEmail}</a>
-                        <h3>Phone</h3>
-                        <p>(760) 433-0160</p>
-                        <h3>Social</h3>
-                        <a target="_blank" href={data.gitHubURL} rel="noopener noreferrer" ><IconButton  ><GitHubIcon className={classes.icons} /></IconButton></a>
-                        <a target="_blank" href={data.linkedInURL} rel="noopener noreferrer" ><IconButton ><LinkedInIcon className={classes.icons} /></IconButton></a>
+                    <Fade bottom cascade> Contact.</Fade>
+                </h1>
+                <Fade bottom>
+                    <div className='contact-content'>
+                        <h1 className={classes.title}>
+                            Let’s create your next<br></br>
+                            <span className={classes.amazingColor}>experience together</span>
+                        </h1>
+                        
+                        <div className={classes.infoWrapper}>
+                            <form className={classes.form} name="contact" method="POST" >
+                                <input type="hidden" name="form-name" value="contact" />
+                                <p>
+                                    <label>Your Name: <input required className={classes.input} type="text" name="name" /></label>   
+                                </p>
+                                <p>
+                                    <label>Your Email: <input required className={classes.input} type="email" name="email" /></label>
+                                </p>
+                                <p>
+                                    <label>Message: <textarea className={classes.textArea} name="message"></textarea></label>
+                                </p>
+                                <p>
+                                    <button className={classes.button} type="submit">Send</button>
+                                </p>
+                            </form>
+                            <div className={classes.contactInfo}>
+                                <h3>Email</h3>
+                                <a href={`mailto:${data.contactEmail}`} className={classes.email}>{data.contactEmail}</a>
+                                <h3>Phone</h3>
+                                <p>(760) 433-0160</p>
+                                <h3>Social</h3>
+                                <a target="_blank" href={data.gitHubURL} rel="noopener noreferrer" ><IconButton  ><GitHubIcon className={classes.icons} /></IconButton></a>
+                                <a target="_blank" href={data.linkedInURL} rel="noopener noreferrer" ><IconButton ><LinkedInIcon className={classes.icons} /></IconButton></a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-        </div>
-        </Fade>
-
-        </div>);
+                </Fade>
+            </div>
+        );
     }
 
 export default Contact;

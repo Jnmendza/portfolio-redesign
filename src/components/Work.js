@@ -6,6 +6,10 @@ import data from '../yourdata';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
+        container: {
+                margin: 'auto',
+                width: '80%'
+        },
         heading: {
                 color: 'white',
                 fontFamily: 'Montserrat, sans-serif',
@@ -13,31 +17,21 @@ const useStyles = makeStyles({
                 textAlign: 'left',
         },
         workContent: {
-                display: 'grid',
-                gridTemplateColumns: 'repeat(2,1fr)',
-                gridGap: '2em',
+                display: 'flex',
+                flexDirection: 'column'
         }
 })
 
 const Work = () => {
         const classes = useStyles()
         return (
-        <div>
+        <div className={classes.container}>
                 <h1 className={classes.heading}>
                 <Fade bottom cascade>Work.</Fade></h1>
                 <div className={classes.workContent}>
                         {data.projects.map((project)=>(
                         <Project key={project.id}
-                                title = {project.title}
-                                description = {project.description}
-                                links={project.links}
-                                service = {project.service}
-                                imageSrc = {project.imageSrc}
-                                details = {project.details}
-                                url={project.url}
-                                code={project.code}
-                                demo={project.demo}
-                                website={project.website}
+                                project={project}
                         ></Project>
                         ))}
                 </div>

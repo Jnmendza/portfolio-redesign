@@ -39,9 +39,9 @@ export default
              description: 'Description of the project1',
              details: ['Detail 1','Detail 2','Detail 3','Detail 4'],
              links:{
-             code: 'https://github.com/Jnmendza/social-media-app/tree/master',
-             demo: 'https://happy-visvesvaraya-6bb649.netlify.app',
-             website: 'Website',
+             code: 'https://www.github.com/Jnmendza/social-media-app/tree/master',
+             demo: 'https://www.happy-visvesvaraya-6bb649.netlify.app',
+             website: 'https://www.google.com',
            }
             },
             {
@@ -55,22 +55,23 @@ export default
                 links: {
                 code: 'https://github.com/Quality-Hub/quality-hub-core-fe',
                 demo: 'https://qualityhub19.netlify.app/',
-                website: 'Website',
+                website: 'https://google.com',
                 }
             },
-            // { 
-            //     id: 3,//DO NOT CHANGE THIS (Please)😅
-            //     title: 'Tune App',
-            //     service: 'Music App',
-            //     imageSrc: `${Music}`,
-            //     url: 'http://chetanverma.com/',
-            //     description: 'Description of the project3',
-            //     details: ['Detail 1','Detail 2','Detail 3','Detail 4'],
-            //     links: {
-            //     code: 'Code',
-            //     demo: 'Demo',
-            //     website: 'Website',}
-            // },
+            { 
+                id: 3,//DO NOT CHANGE THIS (Please)😅
+                title: 'Quizz App',
+                service: 'Trivia game',
+                imageSrc: `${Music}`,
+                url: 'https://nostalgic-franklin-399330.netlify.app/',
+                description: 'Description of the project3',
+                details: ['Detail 1','Detail 2','Detail 3','Detail 4'],
+                links: {
+                code: 'https://www.google.com',
+                demo: 'https://nostalgic-franklin-399330.netlify.app/',
+                website: 'https://google.com',
+            }
+            },
             {
                 id: 4,//DO NOT CHANGE THIS (Please)😅
                 title: 'Kit10 - Store',
@@ -82,7 +83,7 @@ export default
                 links: {
                 code: 'Code',
                 demo: 'Demo',
-                website: 'Website',
+                website: 'https://google.com',
             }
            }
 

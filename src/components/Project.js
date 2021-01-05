@@ -1,50 +1,68 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Fade from 'react-reveal/Fade';
-import Modal from 'react-modal';
-import ProjectModal from './ProjectModal';
-
+import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
-// import zIndex from '@material-ui/core/styles/zIndex';
 
 const useStyles = makeStyles({
     project: {
         color: 'white',
+        display: 'flex',
     },
     image: {
         width: '30em',
         height: '30em',
+        margin: '0 2em 0 0'
     },
-    portal: {
-        // width: '50vw',
-        // zIndex: 1
-    }
+    info: {
+        display: 'flex',
+        flexDirection: 'column',
+        textAlign: 'left',
+        width: '60%'
+    },
+    linkContainer: {
+        display: 'flex',
+        justifyContent: 'flex-start'
+    },
+    link: {
+        textDecoration: 'none',
+        color: 'white',
+        opacity: '0.5',
+        cursor: 'pointer',
+        padding: '0.5em'
+    },
 })
 
-const Project = ({ imageSrc, title, service, description, links, details }) => {
-    const [modalIsOpen, setModalIsOpen] = useState(false)
+const Project = ({ project }) => {
+    const { imageSrc, title, service, description, links, details, url } = project
     const classes = useStyles()
+    
     return ( 
-    <Fade bottom>
+    <Fade bottom >
         <div className={classes.project}>
-            <div onClick={() => setModalIsOpen(true)} >
+            <div>
                 <img className={classes.image} src={imageSrc} alt={title}></img>
             </div>
-            <h1>{title}</h1>
-            <span>{service}</span>
-            <Modal isOpen={modalIsOpen} ariaHideApp={false}>
-                    <ProjectModal 
-                        className={classes.portal}
-                        imageSrc={imageSrc}
-                        title={title} 
-                        description={description}
-                        links={links}
-                        details={details}
-                        setModalIsOpen={setModalIsOpen}
-                    />
-            </Modal>
-        </div> 
-
+            <div className={classes.info}>
+                <h1>{title}</h1>
+                <span>{service}</span>
+                <p>{description}</p>
+                <div className={classes.linkContainer}>
+                   <Link target="_blank" className={classes.link} href={links.code} component="a">Code</Link>
+                   <Link target="_blank" className={classes.link} href={links.demo} component="a">Demo</Link>
+                   <Link target="_blank" className={classes.link} href={links.website} component="a">Website</Link>
+                </div>
+            </div>
+        </div>
     </Fade>);
 }
 
 export default Project;
+
+                                // description = {project.description}
+                                // links={project.links}
+                                // service = {project.service}
+                                // details = {project.details}
+                                // url={project.url}
+                                // code={project.code}
+                                // demo={project.demo}
+                                // website={project.website}

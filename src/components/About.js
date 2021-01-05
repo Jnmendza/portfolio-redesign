@@ -9,9 +9,10 @@ const useStyles = makeStyles({
         flexDirection: 'row',
     },
     aboutContent: {
-        width: '50%',
-        position: 'relative',
-        left:'15em',
+        width: '45%',
+        margin: '0 0 0 4em',
+        // position: 'relative',
+        // left:'15em',
     },
     aboutTitle: {
         color: 'white',
@@ -53,9 +54,7 @@ function About() {
                     </p>
             </Fade>
             </div>
-            {data.ShowAboutImage ? <img src={data.aboutImage} className={classes.aboutImage} alt='about iamge'></img> : null}
-            
-
+            {data.ShowAboutImage ? <img src={data.aboutImage} className={classes.aboutImage} alt='jonathan'></img> : null}
         </div>  );
     }
 

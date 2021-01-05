@@ -14,7 +14,7 @@ const useStyles = makeStyles({
     textAlign: 'center',
   },
   appHeader: {
-    position: 'relative',
+    // position: 'relative',
     minHeight: '100vh',
     display: 'flex',
     flexDirection: 'column',
@@ -27,18 +27,20 @@ const useStyles = makeStyles({
     flexDirection: 'row',
   },
   work: {
-    position: 'relative',
+    // position: 'relative',
     display: 'flex',
     flexDirection: 'column',
-    left:'15em',
-    top:'8em',
-    alignItems: 'flex-start',
+    // left:'10em',
+    // top:'8em',
+    alignItems: 'center',
   },
   contact: {
     color: 'white',
-    position: 'relative',
-    top:'20em',
-    left:'15em',
+    display: 'flex',
+    flexDirection: 'column',
+    // position: 'relative',
+    // top:'20em',
+    // left:'15em',
     textAlign: 'left',
   }
 })
@@ -46,22 +48,23 @@ const useStyles = makeStyles({
 function App() {
   const classes = useStyles()
   return (
+
     <div className={classes.App}>
-      <Navbar></Navbar>
-      <div className={classes.appHeader} id="home">
-      <Header></Header>
+        <Navbar />
+        <div className={classes.appHeader} id="home">
+        <Header></Header>
+        </div>
+        
+        <div className={classes.about} id="about">
+          <About></About>
+        </div>
+        <div className={classes.work} id="work" >
+          <Work></Work>
+        </div>
+        <div className={classes.contact} id="contact">
+          <Contact></Contact>
+        </div>
       </div>
-      
-      <div className={classes.about} id="about">
-        <About></About>
-      </div>
-      <div className={classes.work} id="work" >
-        <Work></Work>
-      </div>
-      <div className={classes.contact} id="contact">
-        <Contact></Contact>
-      </div>
-    </div>
   );
 }
 
