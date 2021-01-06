@@ -13,7 +13,6 @@ const useStyles = makeStyles({
         width: '20em',
         height: '20em',
         margin: '0 2em 0 0',
-        cursor: 'pointer',
     },
     info: {
         display: 'flex',
@@ -21,17 +20,22 @@ const useStyles = makeStyles({
         textAlign: 'left',
         width: '60%'
     },
-    linkContainer: {
-        display: 'flex',
-        justifyContent: 'flex-start'
-    },
     link: {
+        margin: '1em 0.5em 0 0',
+        border: '1px solid white',
         textDecoration: 'none',
         color: 'white',
         opacity: '0.5',
         cursor: 'pointer',
-        padding: '0.5em'
+        padding: '0.5em',
+        '&:hover': {
+            textDecoration: 'none',
+            opacity: 1,
+        }
     },
+    linkContainer: {
+        margin: '2em 0'
+    }
 })
 
 const Project = ({ project }) => {
@@ -48,9 +52,9 @@ const Project = ({ project }) => {
                 <h1>{title}</h1>
                 <span>{service}</span>
                 <p>{description}</p>
-                <div className={classes.linkContainer}>
-                   <Link target="_blank" className={classes.link} href={links.code} component="a">Code</Link>
-                   <Link target="_blank" className={classes.link} href={links.demo} component="a">Demo</Link>
+                 <div className={classes.linkContainer}>
+                   <Link target="_blank" className={classes.link} href={links.code} component="a">How it works</Link>
+                   <Link target="_blank" className={classes.link} href={links.demo} component="a">Check it out</Link>
                 </div>
             </div>
         </div>

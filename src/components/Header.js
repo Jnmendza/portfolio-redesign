@@ -2,7 +2,6 @@ import React from 'react';
 import Fade from 'react-reveal/Fade';
 import data from '../yourdata'
 import Logo from '../jm.svg';
-import Navbar from './Navbar';
 
 import { makeStyles } from '@material-ui/core/styles';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -52,8 +51,12 @@ const useStyles = makeStyles({
     },
     icons: {
         color: 'white',
+        opacity: '0.5',
         fontSize: '1.6em',
-        margin: '20px 0'
+        margin: '20px 0',
+        '&:hover' : {
+            opacity: 1,
+        }
     }    
 })
 

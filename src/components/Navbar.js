@@ -5,13 +5,9 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
     navbar: {
-        // position: 'sticky',
-        // flexDirection: 'column',
-        // width: '10%',
-        // top:'1rem',
         display: 'flex',
         justifyContent: 'center',
-        // backgroundColor: 'pink',
+        backgroundColor: 'black',
         height: '4rem',
     },
     navbarLink: {
@@ -42,10 +38,11 @@ const  Navbar = () => {
     const scrollToTop = () => {
         scroll.scrollToTop();
     };
+
         return (
             <div className={classes.navbar}>
-                <Link
-                className={classes.navbarLink}
+            
+                <Link className={classes.navbarLink}
                 activeClass="active"
                 to="home"
                 spy={true}
@@ -85,53 +82,8 @@ const  Navbar = () => {
                 onClick={scrollToTop}>Contact</Link>
 
             </div>
-        // <nav className={classes.navbar}>
-        //     <ul>
-        //         <li className={classes.navbarList}>
-        //         <Link
-        //             className={classes.navbarLink}
-        //             activeClass="active"
-        //             to="home"
-        //             spy={true}
-        //             smooth={true}
-        //             offset={-70}
-        //             duration={500}
-        //             onClick={scrollToTop}
-        //         >
-        //             Home
-        //         </Link>
-                
-        //         </li>
-        //         <li className={classes.navbarList}><Link
-        //             className={classes.navbarLink}
-        //             activeClass={classes.active}
-        //             to="about"
-        //             spy={true}
-        //             smooth={true}
-        //             offset={-70}
-        //             duration={500}
-        //         >About</Link></li>
-        //         <li className={classes.navbarList}><Link
-        //             className={classes.navbarLink}
-        //             activeClass={classes.active}
-        //             to="work"
-        //             spy={true}
-        //             smooth={true}
-        //             offset={-70}
-        //             duration={500}
-        //         >Work</Link></li>
-        //         <li className={classes.navbarList}><Link
-        //             className={classes.navbarLink}
-        //             activeClass={classes.active}
-        //             to="contact"
-        //             spy={true}
-        //             smooth={true}
-        //             offset={-70}
-        //             duration={500}
-        //         >Contact</Link></li>
-        //     </ul>
-        // </nav> 
         );
     }
+
  
 export default Navbar;

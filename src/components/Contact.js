@@ -77,7 +77,11 @@ const useStyles = makeStyles({
     },
     icons: {
         color: 'white',
+        opacity: '0.5',
         fontSize: '1.6em',
+        '&:hover': {
+            opacity: 1
+        }
     } 
 })
 

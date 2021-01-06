@@ -11,7 +11,7 @@ export default
         //(Please Do Not Remove The comma(,) after every variable)
         //Change The Website Template
         name :'Jonathan Mendoza',
-        resumeURL: 'https://www.jonathanmendoza.dev/assets/JonathanMendozaResume.pdf',
+        resumeURL: 'https://github.com/Jnmendza/portfolio-redesign/blob/main/src/assets/JonathanMendozaResume.pdf',
         gitHubURL: 'https://github.com/jnmendza',
         linkedInURL: 'https://www.linkedin.com/in/jnmendza/',
         headerTagline: [//Line 1 For Header
@@ -53,6 +53,7 @@ export default
                 imageSrc: `${Resume}`,
                 url: 'https://qualityhub19.netlify.app/',
                 description: 'A micro-service of Quality Hub that allows users to search through a marketplace of qualified resume coaches and request a review of their resume.',
+                //  ['Migrated database to PostgresSQL for data persistence','Connected ResumeQ backend with Core and InterviewQ in Apollo Federation','Implemented CRUD functionality with tables','Maintained consistent styling from previous designs of Quality Hub'],
                 details: ['Migrated database to PostgresSQL for data persistence','Connected ResumeQ backend with Core and InterviewQ in Apollo Federation','Implemented CRUD functionality with tables','Maintained consistent styling from previous designs of Quality Hub'],
                 links: {
                 code: 'https://github.com/Quality-Hub/quality-hub-core-fe',
@@ -66,8 +67,8 @@ export default
                 service: 'Trivia game',
                 imageSrc: `${Quiz}`,
                 url: 'https://nostalgic-franklin-399330.netlify.app/',
-                description: 'Description of the project3',
-                details: ['Detail 1','Detail 2','Detail 3','Detail 4'],
+                description: 'A trivia game where users test their knowledge. Users can use 50/50 to remove two answers or receive hints by removing one answer from the board.',
+                details: ['ReactJS','Detail 2','Detail 3','Detail 4'],
                 links: {
                 code: 'https://github.com/Jnmendza/quizz-app',
                 demo: 'https://nostalgic-franklin-399330.netlify.app/',
@@ -77,7 +78,7 @@ export default
             {
                 id: 4,//DO NOT CHANGE THIS (Please)😅
                 title: 'Kit10 - Store',
-                service: 'Branding',
+                service: 'E-commerce',
                 imageSrc: `${Kit}`,
                 url: 'http://chetanverma.com/',
                 description: 'Kit10 is a e-commerce site with retro sports gear. Users can select to add items to their cart, erase, and add more items to purchase.',
@@ -94,8 +95,8 @@ export default
             service: 'Budgeting App',
             imageSrc: `${Tracker}`,
             url: 'https://5ff3da7c49109800080e7924--eager-poitras-fdf1a2.netlify.app/',
-            description: 'Budget your income',
-            details: ['Built a Carousel with Bootstrap','Applied Context API for storing data','Styled application with Styled-Components and Bootstrap','React JS using hooks'],
+            description: 'Budget your money with this single page web app built on the MERN stack and React Hooks. ',
+            details: ['Bootstrap','MERN', 'React Hooks'],
             links: {
             code: 'https://github.com/Jnmendza/eTracker-client',
             demo: 'https://5ff3da7c49109800080e7924--eager-poitras-fdf1a2.netlify.app/',
