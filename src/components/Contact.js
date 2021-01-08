@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Fade from 'react-reveal/Fade';
 import data from '../yourdata';
+import Logo from '../jm.svg';
 
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -82,8 +83,16 @@ const useStyles = makeStyles({
         '&:hover': {
             opacity: 1
         }
-    } 
+    },
+    footer: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+    }
 })
+
+const today = new Date();
+const year = today.getFullYear()
 
 const Contact = () => {
     const classes = useStyles()
@@ -125,6 +134,12 @@ const Contact = () => {
                                 <a target="_blank" href={data.linkedInURL} rel="noopener noreferrer" ><IconButton ><LinkedInIcon className={classes.icons} /></IconButton></a>
                             </div>
                         </div>
+                    </div>
+                </Fade>
+                <Fade bottom cascade>
+                    <div className={classes.footer}>
+                        <img src={Logo} alt="logo" height='30px' style={{ margin: '50px 20px' }}/>
+                        <p>{`Copyright © Jonathan Mendoza ${year}`}</p>
                     </div>
                 </Fade>
             </div>
