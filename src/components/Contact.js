@@ -27,15 +27,15 @@ const useStyles = makeStyles({
     },
     infoWrapper: {
         display: 'flex',
-        justifyContent: 'flex-start',
-        margin: '0 0 100px 0'
+        justifyContent: 'space-between',
+        // margin: '0 0 100px 0'
     },
     contactInfo: {
 
     },
     form: {
-        margin: '0 15em',
-        width: '30%',
+        // margin: '0 15em',
+        width: '60%',
     },
     input: {
         width: '100%',
@@ -99,7 +99,7 @@ const Contact = () => {
         return (  
             <div className={classes.container}>
                 <h1 className={classes.title}>
-                    <Fade bottom cascade> Contact.</Fade>
+                    <Fade bottom cascade>Contact.</Fade>
                 </h1>
                 <Fade bottom>
                     <div className='contact-content'>
@@ -107,7 +107,6 @@ const Contact = () => {
                             Let’s create your next<br></br>
                             <span className={classes.amazingColor}>experience together</span>
                         </h1>
-                        
                         <div className={classes.infoWrapper}>
                             <form className={classes.form} name="contact" method="POST" data-netlify="true" >
                                 <input type="hidden" name="form-name" value="contact" />
