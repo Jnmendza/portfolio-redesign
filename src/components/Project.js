@@ -2,15 +2,15 @@ import React from 'react';
 import Fade from 'react-reveal/Fade';
 import { Link, 
     Chip,
-    Button, 
-    Card, 
-    CardActionArea, 
-    CardActions, 
-    CardMedia, 
-    CardContent, 
-    Typography,
-    Grid,
-    Container
+    // Button, 
+    // Card, 
+    // CardActionArea, 
+    // CardActions, 
+    // CardMedia, 
+    // CardContent, 
+    // Typography,
+    // Grid,
+    // Container
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -61,7 +61,7 @@ const useStyles = makeStyles({
 })
 
 const Project = ({ project }) => {
-    const { imageSrc, title, service, description, links, details, url } = project
+    const { imageSrc, title, service, description, links, details } = project
     const classes = useStyles()
     
     return ( 
@@ -102,9 +102,9 @@ const Project = ({ project }) => {
                 <span>{service}</span>
                 <p>{description}</p>
                 <div>
-                    {details.map((detail) => {
+                    {details.map((detail, index) => {
                         return (
-                            <Chip key={detail} variant="outlined" size='small' label={detail} style={{ color: 'white', border: '1px solid white', margin: '5px 10px' }} />
+                            <Chip key={index} variant="outlined" size='small' label={detail} style={{ color: 'white', border: '0.5px solid white', margin: '5px 10px' }} />
                         )
                     })}
                 </div>

@@ -5,7 +5,7 @@ import Header from './components/Header';
 import About from './components/About';
 import Work from './components/Work';
 import Contact from './components/Contact';
-import Navbar from './components/Navbar'
+import Navbar from './components/Navbar';
 
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -54,7 +54,6 @@ function App() {
         <div className={classes.appHeader} id="home">
         <Header></Header>
         </div>
-        
         <div className={classes.about} id="about">
           <About></About>
         </div>

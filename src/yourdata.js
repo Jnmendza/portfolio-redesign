@@ -1,8 +1,8 @@
 import Image from './me.jpg'
-import Postiva from './images/postiva.jpg'
+// import Postiva from './images/postiva.jpg'
 import Resume from './images/resumeQ.jpg'
 import Kit from './images/kit10.jpg'
-import Music from './images/music.jpg'
+// import Music from './images/music.jpg'
 import Quiz from './images/quiz.png'
 import Tracker from './images/tracker.jpg'
 
@@ -11,7 +11,7 @@ export default
         //(Please Do Not Remove The comma(,) after every variable)
         //Change The Website Template
         name :'Jonathan Mendoza',
-        resumeURL: 'https://github.com/Jnmendza/portfolio-redesign/blob/main/src/assets/JonathanMendozaResume.pdf',
+        resumeURL: 'https://github.com/Jnmendza/portfolio-redesign/blob/main/src/assets/Resume.pdf',
         gitHubURL: 'https://github.com/jnmendza',
         linkedInURL: 'https://www.linkedin.com/in/jnmendza/',
         headerTagline: [//Line 1 For Header
@@ -21,6 +21,7 @@ export default
                         //Line 3 For Header
                         'from San Diego.'
     ],
+        techStack: ['HTML', 'CSS', 'Javascript', 'React.js', 'Redux', 'ContextAPI', 'Node.js', 'Express.js', 'GraphQL', 'Apollo', 'Prisma', 'Python', 'Bootstrap', 'Material-UI', 'SCSS'],
         //Contact Email
         contactEmail:'Jonatmendoza@gmail.com',
         // Add Your About Text Here

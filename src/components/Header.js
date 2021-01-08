@@ -6,7 +6,7 @@ import Logo from '../jm.svg';
 import { makeStyles } from '@material-ui/core/styles';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import {IconButton} from '@material-ui/core';
+import { IconButton, Link } from '@material-ui/core';
 
 const useStyles = makeStyles({
     headingBackground: {
@@ -62,8 +62,6 @@ const useStyles = makeStyles({
 
 const Header = () => {
     const classes = useStyles()
-    // const preventDefault = (event) => event.preventDefault();
-
         return (<div>
         <h1 className={classes.headingBackground}>CREATIVE</h1>
             <Fade bottom>
@@ -79,7 +77,7 @@ const Header = () => {
                 <br></br>
                 {data.headerTagline[2]}
                 <br></br>
-                    <a className={classes.anchor} target="_blank" href={data.resumeURL} rel="noopener noreferrer" ><button className={classes.button}>View CV</button></a>
+                    <Link component="a" href={data.resumeURL} rel="noopener noreferrer" target="_blank" underline='none' ><button className={classes.button}>View CV</button></Link>
                 <br></br>
                     <a target="_blank" href={data.gitHubURL} rel="noopener noreferrer" ><IconButton  ><GitHubIcon className={classes.icons} /></IconButton></a>
                     <a target="_blank" href={data.linkedInURL} rel="noopener noreferrer" ><IconButton ><LinkedInIcon className={classes.icons} /></IconButton></a>

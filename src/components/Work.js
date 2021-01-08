@@ -2,7 +2,9 @@ import React from 'react';
 import Project from './Project';
 import Fade from 'react-reveal/Fade';
 import data from '../yourdata';
-import { Grid } from '@material-ui/core';
+// import { Grid } from '@material-ui/core';
+import TechStack from './TechStack';
+
 
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -40,6 +42,7 @@ const Work = () => {
         //                 </Grid>
         // </div>  
                 <div className={classes.container}>
+                        
                         <h1 className={classes.heading}>
                         <Fade bottom cascade>Work.</Fade></h1>
                         <div className={classes.workContent}>
