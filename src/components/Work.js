@@ -2,6 +2,7 @@ import React from 'react';
 import Project from './Project';
 import Fade from 'react-reveal/Fade';
 import data from '../yourdata';
+import { Grid } from '@material-ui/core';
 
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -25,17 +26,31 @@ const useStyles = makeStyles({
 const Work = () => {
         const classes = useStyles()
         return (
-        <div className={classes.container}>
-                <h1 className={classes.heading}>
-                <Fade bottom cascade>Work.</Fade></h1>
-                <div className={classes.workContent}>
-                        {data.projects.map((project)=>(
-                        <Project key={project.id}
-                                project={project}
-                        ></Project>
-                        ))}
+        // <div className={classes.container}>
+        //         <h1 className={classes.heading}>
+        //         <Fade bottom cascade>Work.</Fade></h1>
+        //         <Grid container spacing={3}>
+        //         {data.projects.map((project)=>(
+        //                 <Grid item xs={12} sm={6} >
+        //                         <Project key={project.id}
+        //                         project={project}
+        //                         ></Project>
+        //                 </Grid>
+        //                 ))}
+        //                 </Grid>
+        // </div>  
+                <div className={classes.container}>
+                        <h1 className={classes.heading}>
+                        <Fade bottom cascade>Work.</Fade></h1>
+                        <div className={classes.workContent}>
+                                {data.projects.map((project)=>(
+                                <Project key={project.id}
+                                        project={project}
+                                ></Project>
+                                ))}
+                        </div>
                 </div>
-        </div>  );
+        );
     }
 
 export default Work;

@@ -1,6 +1,17 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
-import Link from '@material-ui/core/Link';
+import { Link, 
+    Chip,
+    Button, 
+    Card, 
+    CardActionArea, 
+    CardActions, 
+    CardMedia, 
+    CardContent, 
+    Typography,
+    Grid,
+    Container
+} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
@@ -13,6 +24,7 @@ const useStyles = makeStyles({
         width: '20em',
         height: '20em',
         margin: '0 2em 0 0',
+        objectFit: 'cover'
     },
     info: {
         display: 'flex',
@@ -35,7 +47,17 @@ const useStyles = makeStyles({
     },
     linkContainer: {
         margin: '2em 0'
-    }
+    },
+    // root: {
+    //     flexGrow: 1,
+    //     width: '90%',
+    //     height: 480,
+    //     padding: 5,
+    //     backgroundColor: '#F5F5F5'
+    //   },
+    //   media: {
+    //     height: 280,
+    //   },
 })
 
 const Project = ({ project }) => {
@@ -44,6 +66,33 @@ const Project = ({ project }) => {
     
     return ( 
     <Fade bottom >
+    {/* 
+        <Card className={classes.root}>
+            <CardActionArea >
+                <CardMedia
+                    className={classes.media}
+                    image={imageSrc}
+                    title="Project photo"
+                />
+                <CardContent>
+                    <Typography variant="h5" component="h2" align='left'>{title}</Typography>
+                    <Typography gutterBottom variant="caption" component="h3" align='left'>{service}</Typography>
+                    <Typography variant="body2" color="textSecondary" component="p" align="left">
+                        {description}
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
+            <CardActions disableSpacing={false}>
+                    <Button variant="outlined" size="small" href={links.code} target="_blank">
+                    How it works
+                    </Button>
+                    <Button variant="outlined" size="small" href={links.demo} target="_blank">
+                    Check it out
+                    </Button>
+            </CardActions>
+        </Card>
+        */}
+
         <div className={classes.project}>
             <div>
                 <img className={classes.image} src={imageSrc} alt={title}></img>
@@ -52,22 +101,21 @@ const Project = ({ project }) => {
                 <h1>{title}</h1>
                 <span>{service}</span>
                 <p>{description}</p>
+                <div>
+                    {details.map((detail) => {
+                        return (
+                            <Chip key={detail} variant="outlined" size='small' label={detail} style={{ color: 'white', border: '1px solid white', margin: '5px 10px' }} />
+                        )
+                    })}
+                </div>
                  <div className={classes.linkContainer}>
                    <Link target="_blank" className={classes.link} href={links.code} component="a">How it works</Link>
                    <Link target="_blank" className={classes.link} href={links.demo} component="a">Check it out</Link>
                 </div>
             </div>
         </div>
+
     </Fade>);
 }
 
 export default Project;
-
-                                // description = {project.description}
-                                // links={project.links}
-                                // service = {project.service}
-                                // details = {project.details}
-                                // url={project.url}
-                                // code={project.code}
-                                // demo={project.demo}
-                                // website={project.website}

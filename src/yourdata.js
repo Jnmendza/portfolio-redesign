@@ -24,7 +24,7 @@ export default
         //Contact Email
         contactEmail:'Jonatmendoza@gmail.com',
         // Add Your About Text Here
-        abouttext: "I’m a full-stack web developer and with an 8-year background in graphic design. My most recent experience has been in startup environments, loaded with tight deadlines and multiple responsibilities. My creativity has led me to this career because I’ve always wanted to have an understanding of every step of the creative process from beginning to end. As a developer I’m always looking to learn and implement new methods or new approaches to any problem. I'm skilled in JavaScript, React JS, Node JS and Redux.",
+        aboutText: ["I’m a full-stack web developer and with an 8-year background in graphic design. My most recent experience has been in startup environments, loaded with tight deadlines and multiple responsibilities.", "My creativity has led me to this career because I’ve always wanted to have an understanding of every step of the creative process from beginning to end. As a developer I’m always looking to learn and implement new methods or new approaches to any problem."],
         aboutImage:`${Image}`,
        //Change This To Hide The Image of About Section (True Or False)
        ShowAboutImage:true,//true or false (Change Here)
@@ -54,7 +54,7 @@ export default
                 url: 'https://qualityhub19.netlify.app/',
                 description: 'A micro-service of Quality Hub that allows users to search through a marketplace of qualified resume coaches and request a review of their resume.',
                 //  ['Migrated database to PostgresSQL for data persistence','Connected ResumeQ backend with Core and InterviewQ in Apollo Federation','Implemented CRUD functionality with tables','Maintained consistent styling from previous designs of Quality Hub'],
-                details: ['Migrated database to PostgresSQL for data persistence','Connected ResumeQ backend with Core and InterviewQ in Apollo Federation','Implemented CRUD functionality with tables','Maintained consistent styling from previous designs of Quality Hub'],
+                details: ['PostgresSQL','GraphQL','Apollo Federation','axios','CRUD','ReactJs','Styled-Components', 'Express', 'Prisma'],
                 links: {
                 code: 'https://github.com/Quality-Hub/quality-hub-core-fe',
                 demo: 'https://qualityhub19.netlify.app/',
@@ -68,7 +68,7 @@ export default
                 imageSrc: `${Quiz}`,
                 url: 'https://nostalgic-franklin-399330.netlify.app/',
                 description: 'A trivia game where users test their knowledge. Users can use 50/50 to remove two answers or receive hints by removing one answer from the board.',
-                details: ['ReactJS','Detail 2','Detail 3','Detail 4'],
+                details: ['ReactJS','Framer-motion','Material-UI','React hooks'],
                 links: {
                 code: 'https://github.com/Jnmendza/quizz-app',
                 demo: 'https://nostalgic-franklin-399330.netlify.app/',
@@ -82,7 +82,7 @@ export default
                 imageSrc: `${Kit}`,
                 url: 'http://chetanverma.com/',
                 description: 'Kit10 is a e-commerce site with retro sports gear. Users can select to add items to their cart, erase, and add more items to purchase.',
-                details: ['Built a Carousel with Bootstrap','Applied Context API for storing data','Styled application with Styled-Components and Bootstrap','React JS using hooks'],
+                details: ['Bootstrap','Context API','Styled-Components','React hooks'],
                 links: {
                 code: 'https://github.com/Jnmendza/kit10',
                 demo: 'https://kit10.netlify.app/',
@@ -92,11 +92,11 @@ export default
            {
             id: 5,//DO NOT CHANGE THIS (Please)😅
             title: 'E-Tracker',
-            service: 'Budgeting App',
+            service: 'Single Page App',
             imageSrc: `${Tracker}`,
             url: 'https://5ff3da7c49109800080e7924--eager-poitras-fdf1a2.netlify.app/',
-            description: 'Budget your money with this single page web app built on the MERN stack and React Hooks. ',
-            details: ['Bootstrap','MERN', 'React Hooks'],
+            description: 'Budget your money and keep track of your income and expenses. E-tracker is single page web app built on the MERN stack and React Hooks. ',
+            details: ['Bootstrap','MERN', 'React hooks'],
             links: {
             code: 'https://github.com/Jnmendza/eTracker-client',
             demo: 'https://5ff3da7c49109800080e7924--eager-poitras-fdf1a2.netlify.app/',
