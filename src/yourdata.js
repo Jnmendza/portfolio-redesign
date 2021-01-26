@@ -1,15 +1,17 @@
-import Image from './me.jpg'
-// import Postiva from './images/postiva.jpg'
-import Resume from './images/resumeQ.jpg'
-import Kit from './images/kit10.jpg'
-// import Music from './images/music.jpg'
-import Quiz from './images/quiz.png'
-import Tracker from './images/tracker.jpg'
+// import Image from './me.jpg';
+import Image from './images/jon1.jpg';
+// import Postiva from './images/postiva.jpg';
+import Resume from './images/resumeQ.jpg';
+import Kit from './images/kit10.jpg';
+// import Music from './images/music.jpg';
+import Quiz from './images/quiz.png';
+import Tracker from './images/tracker.jpg';
+import Barca from './images/barca.jpg';
 
 export default
     {
         //(Please Do Not Remove The comma(,) after every variable)
-        //Change The Website Template
+
         name :'Jonathan Mendoza',
         resumeURL: 'https://github.com/Jnmendza/portfolio-redesign/blob/main/src/assets/Resume.pdf',
         gitHubURL: 'https://github.com/jnmendza',
@@ -103,7 +105,21 @@ export default
             demo: 'https://5ff3da7c49109800080e7924--eager-poitras-fdf1a2.netlify.app/',
             // website: 'https://google.com',
         }
-       }
+       },
+       {
+        id: 6,//DO NOT CHANGE THIS (Please)😅
+        title: 'BarcaGame',
+        service: 'JS Memory game',
+        imageSrc: `${Barca}`,
+        url: 'https://barca-game.netlify.app/',
+        description: 'The memory game is a basic matching game. In a deck of paired cards, the player needs to match each pair to win the game.',
+        details: ['JS','Vanilla-tilt', 'CSS'],
+        links: {
+        code: 'https://github.com/Jnmendza/Barca-game',
+        demo: 'https://barca-game.netlify.app/',
+        // website: 'https://google.com',
+    }
+   }
         ],
         social: [
             // Add Or Remove The Link Accordingly

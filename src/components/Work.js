@@ -2,9 +2,6 @@ import React from 'react';
 import Project from './Project';
 import Fade from 'react-reveal/Fade';
 import data from '../yourdata';
-// import { Grid } from '@material-ui/core';
-import TechStack from './TechStack';
-
 
 import { makeStyles } from '@material-ui/core/styles';
 

@@ -2,7 +2,6 @@ import React from 'react';
 import Fade from 'react-reveal/Fade';
 import data from '../yourdata';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Paper, Chip, Typography } from '@material-ui/core';
 import TechStack from './TechStack';
 
 const useStyles = makeStyles({
