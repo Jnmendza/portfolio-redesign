@@ -23,7 +23,7 @@ export default
                         //Line 3 For Header
                         'from San Diego.'
     ],
-        techStack: ['HTML', 'CSS', 'Javascript', 'React.js', 'Redux', 'ContextAPI', 'Node.js', 'Express.js', 'GraphQL', 'Apollo', 'Prisma', 'Python', 'Bootstrap', 'Material-UI', 'SCSS'],
+        techStack: ['HTML5', 'CSS', 'Bootstrap', 'Material-UI', 'SCSS', 'Javascript', 'React.js', 'Redux', 'ContextAPI', 'Node.js', 'Express.js', 'GraphQL', 'Apollo', 'Prisma', 'SQLite','MongoDB', 'Python'],
         //Contact Email
         contactEmail:'Jonatmendoza@gmail.com',
         // Add Your About Text Here

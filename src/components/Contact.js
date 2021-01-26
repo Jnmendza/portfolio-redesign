@@ -8,10 +8,10 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import {IconButton} from '@material-ui/core';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
     container: {
         margin: 'auto',
-        width: '80%'
+        width: '80%',
     },
     amazingColor: {
         color:'blue',
@@ -28,14 +28,19 @@ const useStyles = makeStyles({
     infoWrapper: {
         display: 'flex',
         justifyContent: 'space-between',
-        // margin: '0 0 100px 0'
+        [theme.breakpoints.down('sm')]: {
+            display: 'flex',
+            flexDirection: 'column',
+        }
     },
     contactInfo: {
 
     },
     form: {
-        // margin: '0 15em',
-        width: '60%',
+        width: '70%',
+        [theme.breakpoints.down('sm')]: {
+            width: '100%'
+        }
     },
     input: {
         width: '100%',
@@ -89,7 +94,7 @@ const useStyles = makeStyles({
         alignItems: 'center',
         justifyContent: 'center',
     }
-})
+}))
 
 const today = new Date();
 const year = today.getFullYear()

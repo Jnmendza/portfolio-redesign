@@ -4,10 +4,15 @@ import data from '../yourdata';
 import { makeStyles } from '@material-ui/core/styles';
 import TechStack from './TechStack';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
     about: {
         display: 'flex',
         flexDirection: 'row',
+        margin: 'auto',
+        [theme.breakpoints.down('sm')]: {
+            flexDirection: 'column',
+            minWidth: '650px'
+        }
     },
     aboutContent: {
         width: '45%',
@@ -30,8 +35,11 @@ const useStyles = makeStyles({
         transform: 'scaleX(-1)',
         width: '40%',
         height: 'auto',
+        [theme.breakpoints.down('sm')]: {
+            display: 'none'
+        }
     }
-})
+}))
 
 function About() {
         const classes = useStyles()

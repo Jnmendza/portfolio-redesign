@@ -8,7 +8,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import { IconButton, Link } from '@material-ui/core';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
     headingBackground: {
         position: 'fixed',
         opacity: 0.05,
@@ -17,6 +17,13 @@ const useStyles = makeStyles({
         top:'-0.5em',
         zIndex: -100,
         color:'gray',     
+    },
+    container: {
+        width: '90%',
+        margin: 'auto',
+        [theme.breakpoints.down('sm')]: {
+        width: '60%',
+        }
     },
     logo: {
         width: '12%',
@@ -58,34 +65,36 @@ const useStyles = makeStyles({
             opacity: 1,
         }
     }    
-})
+}))
 
 const Header = () => {
     const classes = useStyles()
         return (
             <div>
                 <h1 className={classes.headingBackground}>CREATIVE</h1>
-                <Fade bottom>
-                    <div className={classes.logo}>
-                        <Fade bottom cascade>
-                            <img src={Logo} alt="logo" />
-                        </Fade>
-                    </div>
-                    <p className={classes.headerTitle}>
-                    {data.headerTagline[0]}
-                    <br></br>
-                    {data.headerTagline[1]}
-                    <br></br>
-                    {data.headerTagline[2]}
-                    </p>
-                    <div style={{ float:'left' }}>
+                <div className={classes.container}>
+                    <Fade bottom>
+                        <div className={classes.logo}>
+                            <Fade bottom cascade>
+                                <img src={Logo} alt="logo" />
+                            </Fade>
+                        </div>
+                        <p className={classes.headerTitle}>
+                        {data.headerTagline[0]}
                         <br></br>
-                        <Link component="a" href={data.resumeURL} rel="noopener noreferrer" target="_blank" underline='none' ><button className={classes.button}>View CV</button></Link>
+                        {data.headerTagline[1]}
                         <br></br>
-                        <a target="_blank" href={data.gitHubURL} rel="noopener noreferrer" ><IconButton  ><GitHubIcon className={classes.icons} /></IconButton></a>
-                        <a target="_blank" href={data.linkedInURL} rel="noopener noreferrer" ><IconButton ><LinkedInIcon className={classes.icons} /></IconButton></a>
-                    </div>
-                </Fade>
+                        {data.headerTagline[2]}
+                        </p>
+                        <div style={{ float:'left' }}>
+                            <br></br>
+                            <Link component="a" href={data.resumeURL} rel="noopener noreferrer" target="_blank" underline='none' ><button className={classes.button}>View CV</button></Link>
+                            <br></br>
+                            <a target="_blank" href={data.gitHubURL} rel="noopener noreferrer" ><IconButton  ><GitHubIcon className={classes.icons} /></IconButton></a>
+                            <a target="_blank" href={data.linkedInURL} rel="noopener noreferrer" ><IconButton ><LinkedInIcon className={classes.icons} /></IconButton></a>
+                        </div>
+                    </Fade>
+                </div>
             </div>
         );
     }

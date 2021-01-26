@@ -5,10 +5,10 @@ import data from '../yourdata';
 
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
         container: {
                 margin: 'auto',
-                width: '80%'
+                width: '80%',
         },
         heading: {
                 color: 'white',
@@ -20,7 +20,7 @@ const useStyles = makeStyles({
                 display: 'flex',
                 flexDirection: 'column'
         }
-})
+}));
 
 const Work = () => {
         const classes = useStyles()

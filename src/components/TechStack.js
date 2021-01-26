@@ -33,7 +33,7 @@ const TechStack = () => {
                 <Grid container xs={12} spacing={1}>
                     {data.techStack.map((stack, index) => {
                                     return(
-                                        <Grid item xs={4} sm={2} >
+                                        <Grid item xs={4} md={2} >
                                             <Chip key={index} label={stack} variant="outlined" style={{ color: 'grey',  }}></Chip>
                                         </Grid>
                                     )

@@ -14,11 +14,17 @@ import { Link,
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
     project: {
         color: 'white',
         display: 'flex',
-        margin: '0 0 1em 0'
+        margin: '0 0 1em 0',
+        [theme.breakpoints.down('sm')]: {
+            display: 'flex',
+            flexDirection: 'column',
+            borderTop: '1px solid white',
+            paddingTop: '50px'
+    }
     },
     image: {
         width: '20em',
@@ -29,8 +35,12 @@ const useStyles = makeStyles({
     info: {
         display: 'flex',
         flexDirection: 'column',
+        justifyContent: 'space-between',
         textAlign: 'left',
-        width: '60%'
+        width: '60%',
+        [theme.breakpoints.down('sm')]: {
+            margin: 'auto'
+    }
     },
     link: {
         margin: '1em 0.5em 0 0',
@@ -58,7 +68,7 @@ const useStyles = makeStyles({
     //   media: {
     //     height: 280,
     //   },
-})
+}));
 
 const Project = ({ project }) => {
     const { imageSrc, title, service, description, links, details } = project
@@ -101,6 +111,7 @@ const Project = ({ project }) => {
                 <h1>{title}</h1>
                 <span>{service}</span>
                 <p>{description}</p>
+
                 <div>
                     {details.map((detail, index) => {
                         return (
@@ -108,10 +119,12 @@ const Project = ({ project }) => {
                         )
                     })}
                 </div>
+
                  <div className={classes.linkContainer}>
                    <Link target="_blank" className={classes.link} href={links.code} component="a">How it works</Link>
                    <Link target="_blank" className={classes.link} href={links.demo} component="a">Check it out</Link>
                 </div>
+
             </div>
         </div>
 
