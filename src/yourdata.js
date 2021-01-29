@@ -27,7 +27,7 @@ export default
         //Contact Email
         contactEmail:'Jonatmendoza@gmail.com',
         // Add Your About Text Here
-        aboutText: ["I’m a full-stack web developer and with an 8-year background in graphic design. My most recent experience has been in startup environments, loaded with tight deadlines and multiple responsibilities.", "My creativity has led me to this career because I’ve always wanted to have an understanding of every step of the creative process from beginning to end. As a developer I’m always looking to learn and implement new methods or new approaches to any problem."],
+        aboutText: ["I’m a full-stack web developer with an 8-year background in graphic design. My most recent experience has been in startup environments, loaded with tight deadlines and multiple responsibilities.", "My creativity has led me to this career because I’ve always wanted to have an understanding of every step of the creative process from beginning to end. As a developer I’m always looking to learn and implement new methods or new approaches to any problem."],
         aboutImage:`${Image}`,
        //Change This To Hide The Image of About Section (True Or False)
        ShowAboutImage:true,//true or false (Change Here)
