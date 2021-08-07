@@ -1,12 +1,11 @@
-// import Image from './me.jpg';
 import Image from './images/jon1.jpg';
-// import Postiva from './images/postiva.jpg';
 import Resume from './images/resumeQ.jpg';
-import Kit from './images/kit10.jpg';
-// import Music from './images/music.jpg';
+import Gym from './images/gym.jpg';
 import Quiz from './images/quiz.png';
 import Tracker from './images/tracker.jpg';
 import Barca from './images/barca.jpg';
+import Recipe from './images/recipe.jpg';
+import Baseball from './images/baseball.jpg'
 
 export default
     {
@@ -33,22 +32,21 @@ export default
        ShowAboutImage:true,//true or false (Change Here)
        // Change Projects Here 
        projects:[
-        //    {
-        //     id: 1,//DO NOT CHANGE THIS (Please)😅
-        //     title:'Postiva', //Project Title - Add Your Project Title Here
-        //      service:'Social Media App', // Add Your Service Type Here
-        //     //Project Image - Add Your Project Image Here
-        //      imageSrc:`${Postiva}`,
-        //      //Project URL - Add Your Project Url Here
-        //      url:'http://chetanverma.com/',
-        //      description: 'Description of the project1',
-        //      details: ['Detail 1','Detail 2','Detail 3','Detail 4'],
-        //      links:{
-        //      code: 'https://www.github.com/Jnmendza/social-media-app/tree/master',
-        //      demo: 'https://www.happy-visvesvaraya-6bb649.netlify.app',
-        //      website: 'https://www.google.com',
-        //    }
-        //     },
+           {
+            id: 1,//DO NOT CHANGE THIS (Please)😅
+            title:'Recipe site', //Project Title - Add Your Project Title Here
+             service:'Recipe API - Single page app', // Add Your Service Type Here
+            //Project Image - Add Your Project Image Here
+             imageSrc:`${Recipe}`,
+             //Project URL - Add Your Project Url Here
+             url:'https://vigorous-bell-158ebc.netlify.app/',
+             description: 'A single page app where users can browse the Tasty API for recipes by ingredients . Users can view videos and list of ingredients.',
+             details: ['React JS','useHooks','API','Styled-Components'],
+             links:{
+             code: 'https://github.com/Jnmendza/recipe-app-api',
+             demo: 'https://vigorous-bell-158ebc.netlify.app/',
+           }
+            },
             {
                 id: 2,//DO NOT CHANGE THIS (Please)😅
                 title: 'Quality Hub: ResumeQ',
@@ -61,7 +59,6 @@ export default
                 links: {
                 code: 'https://github.com/Quality-Hub/quality-hub-core-fe',
                 demo: 'https://qualityhub19.netlify.app/',
-                // website: 'https://google.com',
                 }
             },
             { 
@@ -75,21 +72,19 @@ export default
                 links: {
                 code: 'https://github.com/Jnmendza/quizz-app',
                 demo: 'https://nostalgic-franklin-399330.netlify.app/',
-                // website: 'https://google.com',
             }
             },
             {
                 id: 4,//DO NOT CHANGE THIS (Please)😅
-                title: 'Kit10 - Store',
-                service: 'E-commerce',
-                imageSrc: `${Kit}`,
-                url: 'http://chetanverma.com/',
-                description: 'Kit10 is a e-commerce site with retro sports gear. Users can select to add items to their cart, erase, and add more items to purchase.',
-                details: ['Bootstrap','Context API','Styled-Components','React hooks'],
+                title: 'Players Bio-Cards',
+                service: 'Baseball API Cards',
+                imageSrc: `${Baseball}`,
+                url: 'https://upbeat-northcutt-1aaafd.netlify.app/',
+                description: `A display of digital baseball cards. Career stats and player bio's are pulled from MLB Data API.` ,
+                details: ['Vanilla JS','HTML','CSS'],
                 links: {
-                code: 'https://github.com/Jnmendza/kit10',
-                demo: 'https://kit10.netlify.app/',
-                // website: 'https://google.com',
+                code: 'https://github.com/Jnmendza/baseball-card-api',
+                demo: 'https://upbeat-northcutt-1aaafd.netlify.app/',
             }
            },
            {
@@ -103,7 +98,6 @@ export default
             links: {
             code: 'https://github.com/Jnmendza/eTracker-client',
             demo: 'https://5ff3da7c49109800080e7924--eager-poitras-fdf1a2.netlify.app/',
-            // website: 'https://google.com',
         }
        },
        {
@@ -113,13 +107,25 @@ export default
         imageSrc: `${Barca}`,
         url: 'https://barca-game.netlify.app/',
         description: 'The memory game is a basic matching game. In a deck of paired cards, the player needs to match each pair to win the game.',
-        details: ['JS','Vanilla-tilt', 'CSS'],
+        details: ['Vanilla JS','Vanilla-tilt', 'HTML', 'CSS'],
         links: {
         code: 'https://github.com/Jnmendza/Barca-game',
         demo: 'https://barca-game.netlify.app/',
-        // website: 'https://google.com',
-    }
-   }
+            }
+        },
+        {
+            id: 7,//DO NOT CHANGE THIS (Please)😅
+            title: 'Gym website',
+            service: 'Responsive web design',
+            imageSrc: `${Gym}`,
+            url: 'https://compassionate-visvesvaraya-b64214.netlify.app/',
+            description: 'A responsive website for a local Jiu Jitsu gym built with html and css. The animation on each section was built with GSAP. ',
+            details: ['Vanilla JS','HTML', 'CSS', 'GSAP'],
+            links: {
+            code: 'https://github.com/Jnmendza/responisve-bjj-site',
+            demo: 'https://compassionate-visvesvaraya-b64214.netlify.app/',
+                }
+            }
         ],
         social: [
             // Add Or Remove The Link Accordingly

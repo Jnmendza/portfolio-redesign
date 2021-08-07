@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'row',
         margin: 'auto',
+        width: '80%',
         [theme.breakpoints.down('sm')]: {
             flexDirection: 'column',
             minWidth: '650px'
@@ -33,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     aboutImage: {
         marginLeft: '5em',
         transform: 'scaleX(-1)',
-        width: '40%',
+        width: 'auto',
         height: 'auto',
         [theme.breakpoints.down('sm')]: {
             display: 'none'
@@ -45,6 +46,7 @@ function About() {
         const classes = useStyles()
 
         return (
+            
             <div className={classes.about}>
                 <div className={classes.aboutContent}>
                     <h1 className={classes.aboutTitle}><Fade bottom cascade>About.</Fade></h1>

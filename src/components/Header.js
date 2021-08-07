@@ -1,5 +1,8 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
+import Typical from 'react-typical';
+import Navbar from './Navbar'
+
 import data from '../yourdata'
 import Logo from '../jm.svg';
 
@@ -9,6 +12,9 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import { IconButton, Link } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
+    wrapper: {
+        marginTop: '50px',
+    },
     headingBackground: {
         position: 'fixed',
         opacity: 0.05,
@@ -20,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     },
     container: {
         width: '90%',
-        margin: 'auto',
+        margin: '0px auto',
         [theme.breakpoints.down('sm')]: {
         width: '60%',
         }
@@ -30,11 +36,12 @@ const useStyles = makeStyles((theme) => ({
         height: '12%',
     },
     headerTitle: {
-        position: 'relative',
+        // position: 'relative',
         fontFamily: 'Montserrat, sans-serif',
         fontSize: '3em',
         textAlign: 'left',
-        top:'2em',        
+        lineHeight: '50px'
+        // top:'2em',        
     },
     button: {
         marginTop: '50px',
@@ -70,23 +77,36 @@ const useStyles = makeStyles((theme) => ({
 const Header = () => {
     const classes = useStyles()
         return (
-            <div>
+            <div className={classes.wrapper}>
                 <h1 className={classes.headingBackground}>CREATIVE</h1>
                 <div className={classes.container}>
                     <Fade bottom>
                         <div className={classes.logo}>
                             <Fade bottom cascade>
                                 <img src={Logo} alt="logo" />
+                                <Navbar />
                             </Fade>
                         </div>
-                        <p className={classes.headerTitle}>
-                        {data.headerTagline[0]}
-                        <br></br>
-                        {data.headerTagline[1]}
-                        <br></br>
-                        {data.headerTagline[2]}
-                        </p>
-                        <div style={{ float:'left' }}>
+                        <div className={classes.headerTitle}>
+                            <p>{data.headerTagline[0]}</p>
+                            {/* 
+                                {data.headerTagline[1]}
+                            */}
+                            <Typical 
+                                loop={Infinity}
+                                wrapper="span"
+                                steps={[
+                                    'Graphic Designer',
+                                    2000,
+                                    'Web Developer',
+                                    2000,
+                                    'Digital Designer',
+                                    2000
+                                ]}
+                                />
+                                <p>{data.headerTagline[2]}</p>
+                            </div>
+                            <div style={{ float:'left' }}>
                             <br></br>
                             <Link component="a" href={data.resumeURL} rel="noopener noreferrer" target="_blank" underline='none' ><button className={classes.button}>View CV</button></Link>
                             <br></br>

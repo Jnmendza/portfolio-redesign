@@ -1,5 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Typical from 'react-typical';
+
 import Fade from 'react-reveal/Fade';
 import data from '../yourdata';
 import Logo from '../jm.svg';
@@ -89,18 +91,21 @@ const useStyles = makeStyles((theme) => ({
             opacity: 1
         }
     },
-    footer: {
+    footerCopyright: {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
     }
 }))
 
-const today = new Date();
-const year = today.getFullYear()
 
 const Contact = () => {
-    const classes = useStyles()
+    const classes = useStyles();
+    const today = new Date();
+    const dayOfWeek = today.getDay();
+    const year = today.getFullYear();
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+
         return (  
             <div className={classes.container}>
                 <h1 className={classes.title}>
@@ -142,8 +147,22 @@ const Contact = () => {
                 </Fade>
                 <Fade bottom cascade>
                     <div className={classes.footer}>
-                        <img src={Logo} alt="logo" height='30px' style={{ margin: '50px 20px' }}/>
-                        <p>{`Copyright © Jonathan Mendoza ${year}`}</p>
+                        <span>Have a </span>
+                        <Typical 
+                            loop={Infinity}
+                            wrapper="span"
+                            steps={[
+                                'wonderful',
+                                2000,
+                                'great',
+                                2000
+                            ]}
+                        />
+                        {days[dayOfWeek]==='Friday' ? <span>weekend!</span> : <span>{days[dayOfWeek]}!</span>}
+                        <div className={classes.footerCopyright}>
+                            <img src={Logo} alt="logo" height='30px' style={{ margin: '50px 20px' }}/>
+                            <p>{`Copyright © Jonathan Mendoza ${year}`}</p>
+                        </div>
                     </div>
                 </Fade>
             </div>

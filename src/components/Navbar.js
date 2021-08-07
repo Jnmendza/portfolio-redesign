@@ -5,19 +5,22 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
     navbar: {
+        position: 'absolute',
+        top: '80px',
+        right: '150px',
         display: 'flex',
         justifyContent: 'center',
-        backgroundColor: 'black',
-        height: '4rem',
+        background: 'black',
+        // height: '4rem',
+        zIndex: '99',
     },
     navbarLink: {
         textDecoration: 'none',
         color: 'white',
-        padding:'2em',
+        padding:'1em',
         opacity: '0.5',
         transition: 'all 0.3s ease-in-out',
         cursor: 'pointer',
-        // backgroundColor: 'red',
         // -webkit-transition: 'all 0.3s ease-in-out',
         // -moz-transition: 'all 0.3s ease-in-out',
         // -ms-transition: 'all 0.3s ease-in-out',

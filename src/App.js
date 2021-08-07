@@ -5,7 +5,6 @@ import Header from './components/Header';
 import About from './components/About';
 import Work from './components/Work';
 import Contact from './components/Contact';
-import Navbar from './components/Navbar';
 
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -14,7 +13,6 @@ const useStyles = makeStyles({
     textAlign: 'center',
   },
   appHeader: {
-    // position: 'relative',
     minHeight: '100vh',
     display: 'flex',
     flexDirection: 'column',
@@ -27,20 +25,14 @@ const useStyles = makeStyles({
     flexDirection: 'row',
   },
   work: {
-    // position: 'relative',
     display: 'flex',
     flexDirection: 'column',
-    // left:'10em',
-    // top:'8em',
     alignItems: 'center',
   },
   contact: {
     color: 'white',
     display: 'flex',
     flexDirection: 'column',
-    // position: 'relative',
-    // top:'20em',
-    // left:'15em',
     textAlign: 'left',
   }
 })
@@ -50,7 +42,6 @@ function App() {
   return (
 
     <div className={classes.App}>
-        <Navbar />
         <div className={classes.appHeader} id="home">
         <Header></Header>
         </div>

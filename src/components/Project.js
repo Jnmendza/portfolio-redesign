@@ -76,33 +76,6 @@ const Project = ({ project }) => {
     
     return ( 
     <Fade bottom >
-    {/* 
-        <Card className={classes.root}>
-            <CardActionArea >
-                <CardMedia
-                    className={classes.media}
-                    image={imageSrc}
-                    title="Project photo"
-                />
-                <CardContent>
-                    <Typography variant="h5" component="h2" align='left'>{title}</Typography>
-                    <Typography gutterBottom variant="caption" component="h3" align='left'>{service}</Typography>
-                    <Typography variant="body2" color="textSecondary" component="p" align="left">
-                        {description}
-                    </Typography>
-                </CardContent>
-            </CardActionArea>
-            <CardActions disableSpacing={false}>
-                    <Button variant="outlined" size="small" href={links.code} target="_blank">
-                    How it works
-                    </Button>
-                    <Button variant="outlined" size="small" href={links.demo} target="_blank">
-                    Check it out
-                    </Button>
-            </CardActions>
-        </Card>
-        */}
-
         <div className={classes.project}>
             <div>
                 <img className={classes.image} src={imageSrc} alt={title}></img>
@@ -123,6 +96,7 @@ const Project = ({ project }) => {
                  <div className={classes.linkContainer}>
                    <Link target="_blank" className={classes.link} href={links.code} component="a">How it works</Link>
                    <Link target="_blank" className={classes.link} href={links.demo} component="a">Check it out</Link>
+                   {links.vue ? <Link target="_blank" className={classes.link} href={links.demo} component="a">Vue JS</Link> : null}
                 </div>
 
             </div>
