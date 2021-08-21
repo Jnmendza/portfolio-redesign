@@ -7,18 +7,31 @@ import Work from './components/Work';
 import Contact from './components/Contact';
 
 import { makeStyles } from '@material-ui/core/styles';
+import Logo from './jm.svg';
+import Navbar from './components/Navbar'
 
 const useStyles = makeStyles({
   App: {
     textAlign: 'center',
   },
+  navbar: {
+    display: 'flex',
+    alignItems: 'center',
+    padding: '15px 0',
+    justifyContent: 'space-evenly',
+    backgroundColor: 'black'
+  },
+  logo: {
+    width: '70px',
+    height: '70px'
+  },
   appHeader: {
-    minHeight: '100vh',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     color: 'white',
     top:'4em',
+    marginBottom: '75px'
   },
   about: {
     display: 'flex',
@@ -40,21 +53,26 @@ const useStyles = makeStyles({
 function App() {
   const classes = useStyles()
   return (
-
+    <>
+    <div className={classes.navbar}>
+        <img className={classes.logo} src={Logo} alt="logo" />
+        <Navbar />
+    </div>
     <div className={classes.App}>
         <div className={classes.appHeader} id="home">
-        <Header></Header>
+        <Header/>
         </div>
         <div className={classes.about} id="about">
-          <About></About>
+          <About/>
         </div>
         <div className={classes.work} id="work" >
-          <Work></Work>
+          <Work/>
         </div>
         <div className={classes.contact} id="contact">
-          <Contact></Contact>
+          <Contact/>
         </div>
       </div>
+      </>
   );
 }
 

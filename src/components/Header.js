@@ -1,10 +1,8 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
 import Typical from 'react-typical';
-import Navbar from './Navbar'
 
 import data from '../yourdata'
-import Logo from '../jm.svg';
 
 import { makeStyles } from '@material-ui/core/styles';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -12,9 +10,6 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import { IconButton, Link } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
-    wrapper: {
-        marginTop: '50px',
-    },
     headingBackground: {
         position: 'fixed',
         opacity: 0.05,
@@ -30,10 +25,6 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
         width: '60%',
         }
-    },
-    logo: {
-        width: '12%',
-        height: '12%',
     },
     headerTitle: {
         // position: 'relative',
@@ -77,16 +68,11 @@ const useStyles = makeStyles((theme) => ({
 const Header = () => {
     const classes = useStyles()
         return (
+            <>
             <div className={classes.wrapper}>
                 <h1 className={classes.headingBackground}>CREATIVE</h1>
                 <div className={classes.container}>
                     <Fade bottom>
-                        <div className={classes.logo}>
-                            <Fade bottom cascade>
-                                <img src={Logo} alt="logo" />
-                                <Navbar />
-                            </Fade>
-                        </div>
                         <div className={classes.headerTitle}>
                             <p>{data.headerTagline[0]}</p>
                             {/* 
@@ -98,7 +84,7 @@ const Header = () => {
                                 steps={[
                                     'Graphic Designer',
                                     2000,
-                                    'Web Developer',
+                                    'Software Engineer',
                                     2000,
                                     'Digital Designer',
                                     2000
@@ -116,6 +102,7 @@ const Header = () => {
                     </Fade>
                 </div>
             </div>
+            </>
         );
     }
 

@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         fontFamily: 'Montserrat, sans-serif',
-        fontSize: '5em',
+        fontSize: 'clamp(3.5rem, 8vw, 2rem);',
         textAlign: 'left',       
     },
     contactContent: {
@@ -36,7 +36,18 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     contactInfo: {
-
+        [theme.breakpoints.down('sm')]: {
+            display: 'flex',
+            alignItems: 'center',
+            margin: '25px auto 0 auto'
+        }
+    },
+    iconWrapper: {
+        [theme.breakpoints.down('sm')]: {
+            display: 'flex',
+            flexDirection: 'column',
+            margin: '0 20px'
+        }
     },
     form: {
         width: '70%',
@@ -91,6 +102,10 @@ const useStyles = makeStyles((theme) => ({
             opacity: 1
         }
     },
+    footer: {
+        marginTop: '15px',
+        borderTop: '1px solid white'
+    },
     footerCopyright: {
         display: 'flex',
         alignItems: 'center',
@@ -104,7 +119,6 @@ const Contact = () => {
     const today = new Date();
     const dayOfWeek = today.getDay();
     const year = today.getFullYear();
-    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
         return (  
             <div className={classes.container}>
@@ -120,45 +134,28 @@ const Contact = () => {
                         <div className={classes.infoWrapper}>
                             <form className={classes.form} name="contact" method="POST" data-netlify="true" >
                                 <input type="hidden" name="form-name" value="contact" />
-                                <p>
-                                    <label>Your Name: <input required className={classes.input} type="text" name="name" /></label>   
-                                </p>
-                                <p>
-                                    <label>Your Email: <input required className={classes.input} type="email" name="email" /></label>
-                                </p>
-                                <p>
-                                    <label>Message: <textarea className={classes.textArea} name="message"></textarea></label>
-                                </p>
-                                <p>
-                                    <button className={classes.button} type="submit">Send</button>
-                                </p>
+                                <p><label>Your Name: <input required className={classes.input} type="text" name="name" /></label>   </p>
+                                <p><label>Your Email: <input required className={classes.input} type="email" name="email" /></label></p>
+                                <p><label>Message: <textarea className={classes.textArea} name="message"></textarea></label></p>
+                                <p><button className={classes.button} type="submit">Send</button></p>
                             </form>
                             <div className={classes.contactInfo}>
-                                <h3>Email</h3>
-                                <a href={`mailto:${data.contactEmail}`} className={classes.email}>{data.contactEmail}</a>
-                                <h3>Phone</h3>
-                                <p>(760) 433-0160</p>
-                                <h3>Social</h3>
-                                <a target="_blank" href={data.gitHubURL} rel="noopener noreferrer" ><IconButton  ><GitHubIcon className={classes.icons} /></IconButton></a>
-                                <a target="_blank" href={data.linkedInURL} rel="noopener noreferrer" ><IconButton ><LinkedInIcon className={classes.icons} /></IconButton></a>
+                                <div className={classes.iconWrapper}>
+                                    <a target="_blank" href={data.gitHubURL} rel="noopener noreferrer" ><IconButton><GitHubIcon className={classes.icons} /></IconButton></a>
+                                    <a target="_blank" href={data.linkedInURL} rel="noopener noreferrer" ><IconButton><LinkedInIcon className={classes.icons} /></IconButton></a>
+                                </div>
+                                <div className={classes.contactWrapper}>
+                                    <h3>Email</h3>
+                                    <a href={`mailto:${data.contactEmail}`} className={classes.email}>{data.contactEmail}</a>
+                                    <h3>Phone</h3>
+                                    <p>(760) 433-0160</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </Fade>
                 <Fade bottom cascade>
                     <div className={classes.footer}>
-                        <span>Have a </span>
-                        <Typical 
-                            loop={Infinity}
-                            wrapper="span"
-                            steps={[
-                                'wonderful',
-                                2000,
-                                'great',
-                                2000
-                            ]}
-                        />
-                        {days[dayOfWeek]==='Friday' ? <span>weekend!</span> : <span>{days[dayOfWeek]}!</span>}
                         <div className={classes.footerCopyright}>
                             <img src={Logo} alt="logo" height='30px' style={{ margin: '50px 20px' }}/>
                             <p>{`Copyright © Jonathan Mendoza ${year}`}</p>

@@ -12,17 +12,21 @@ const useStyles = makeStyles((theme) => ({
         width: '80%',
         [theme.breakpoints.down('sm')]: {
             flexDirection: 'column',
-            minWidth: '650px'
+            width:'100%',
         }
     },
     aboutContent: {
         width: '45%',
         margin: '0 auto',
+        [theme.breakpoints.down('sm')]: {
+            width: '80%'
+        }
     },
     aboutTitle: {
         color: 'white',
         fontFamily: 'Montserrat, sans-serif',
-        fontSize: '5em',
+        // fontSize: '5em',
+        fontSize: 'clamp(3.5rem, 8vw, 2rem);',
         textAlign: 'left',
         marginTop: -10,
     },
@@ -34,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
     aboutImage: {
         marginLeft: '5em',
         transform: 'scaleX(-1)',
+        objectFit: 'cover',
         width: 'auto',
         height: 'auto',
         [theme.breakpoints.down('sm')]: {

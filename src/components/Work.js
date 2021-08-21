@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
         heading: {
                 color: 'white',
                 fontFamily: 'Montserrat, sans-serif',
-                fontSize: '5em',
+                fontSize: 'clamp(3.5rem, 8vw, 2rem);',
                 textAlign: 'left',
         },
         workContent: {
