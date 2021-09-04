@@ -147,8 +147,7 @@ const Contact = () => {
                                 <div className={classes.contactWrapper}>
                                     <h3>Email</h3>
                                     <a href={`mailto:${data.contactEmail}`} className={classes.email}>{data.contactEmail}</a>
-                                    <h3>Phone</h3>
-                                    <p>(760) 433-0160</p>
+                                    
                                 </div>
                             </div>
                         </div>
